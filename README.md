@@ -61,6 +61,7 @@ On obtient avec 5 actions:
 
 
 Avec un portefeuille plus varié, on obtient un meilleur résultat:
+
 15% de rendement pour 6,5% de risque
 
 ![Figure_1_projet2](https://github.com/user-attachments/assets/cc11c918-98fd-4b63-8c93-0d36efb651c8)
@@ -70,7 +71,4 @@ Avec un portefeuille plus varié, on obtient un meilleur résultat:
 
 ---
 
-## Frontière Efficiente
-
-La frontière efficiente montre les portefeuilles avec le meilleur compromis entre risque et rendement. Dans notre projet, nous générons plusieurs portefeuilles aléatoires et identifions celui qui offre le meilleur ratio rendement/risque.
 
