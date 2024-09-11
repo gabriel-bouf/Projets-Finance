@@ -57,12 +57,28 @@ L'objectif est de trouver les pondérations optimales des actions dans un portef
 
 
 ## Présentation des résultats
-On obtient avec 5 actions:
+On obtient avec 4 actions:
+
+![p2_5a_puiss08](https://github.com/user-attachments/assets/23492b3a-4ac7-4681-8a03-375796ebb58b)
+
+*On remarquera que les performances obtenues sur ce choix d'actions ne sont pas excellentes*
+
+En modifiant la fonction à minimiser, le portefeuille optimal se déplace sur la frontière d'efficience
+
+
+
+![p2_5action_puissance01](https://github.com/user-attachments/assets/d3daf5f4-415f-40ca-a271-bc326b1c00ed)
+*On a ici `risque/(rendement**0.1)`, ce qui privilégie les positions moins risquées*
+
 
 
 Avec un portefeuille plus varié, on obtient un meilleur résultat:
 
+
+
 15% de rendement pour 6,5% de risque
+
+
 
 ![Figure_1_projet2](https://github.com/user-attachments/assets/cc11c918-98fd-4b63-8c93-0d36efb651c8)
 
