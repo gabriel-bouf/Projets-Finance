@@ -10,7 +10,23 @@ L'objectif est d'ajuster dynamiquement l'exposition au S&P 500 en fonction de la
 
 Les étapes importantes de mon algorithme sont:
 
-1.
+1. Récupération des données historiques avec yfinance
+2. Calcul du rendement à la main
+3. Calcul de la volatilité sur une fenêtre à définir, par exemple 20 jours, à la main
+4. Calcul du rendement nécessaire pour ne pas dépasser un risque cible
+
+## Détails du Projet
+
+J'ai préféré calculer à la main le rendement et la volatilité afin de me familiariser avec les détails techniques, par exemple le problème de calcul de la volatilité sur les 20 premiers jours (je prends une fenêtre de 20 jours), puisqu'elle est calculée grâce à l'écart-type des 20 derniers rendements.
+J'ai utilisé la formule:
+Rendement modifié = rendement * (volatilité cible / volatilité actuelle)
+sachant que (volatilité cible / volatilité actuelle) corresponds à l'effet de levier
+
+## Présentation des résultats
+Par rapport au [modèle de base](https://www.spglobal.com/spdji/en/indices/multi-asset/sp-500-daily-risk-control-5-index/#overview), on retrouve presque le même graphique, avec seulement un décalage d'environ 3% sur un an.
+
+![Graphe de mon code ](path/to/frontiere_efficiente_image.png)  
+*Exemple de frontière efficiente : chaque point représente une combinaison rendement/risque, et le point rouge correspond au portefeuille optimal.*
 
 ---
 
@@ -33,7 +49,6 @@ L'objectif est de trouver les pondérations optimales des actions dans un portef
 7. Affichage de tous les portefeuilles, y compris celui optimal, afin de comparer
 
 
----
 
 ## Présentation des résultats
 
