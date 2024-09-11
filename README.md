@@ -25,8 +25,14 @@ sachant que (volatilité cible / volatilité actuelle) corresponds à l'effet de
 ## Présentation des résultats
 Par rapport au [modèle de base](https://www.spglobal.com/spdji/en/indices/multi-asset/sp-500-daily-risk-control-5-index/#overview), on retrouve presque le même graphique, avec seulement un décalage d'environ 3% sur un an.
 
-![Graphe de mon code ](path/to/frontiere_efficiente_image.png)  
-*Exemple de frontière efficiente : chaque point représente une combinaison rendement/risque, et le point rouge correspond au portefeuille optimal.*
+
+
+![image](https://github.com/user-attachments/assets/ab26c652-308f-4ba0-8276-50e3b983942c)
+*Modèle utilisé comme référence*
+
+![SP500_le_mien](https://github.com/user-attachments/assets/96cc1b53-a108-4230-ae73-cc5de319ec41)
+*Mon modèle*
+
 
 ---
 
@@ -51,14 +57,16 @@ L'objectif est de trouver les pondérations optimales des actions dans un portef
 
 
 ## Présentation des résultats
+On obtient avec 5 actions:
 
-1. **Téléchargement des données financières** : Récupération des données de prix historiques des actions via l'API Yahoo Finance avec `yfinance`.
-2. **Calcul du risque et du rendement** : Le risque est basé sur la volatilité, et le rendement attendu est calculé à partir des moyennes historiques des rendements.
-3. **Optimisation des pondérations** : Utilisation de la méthode SLSQP pour minimiser une fonction de performance basée sur le ratio rendement/risque.
-4. **Frontière efficiente** : Visualisation de toutes les combinaisons possibles de portefeuilles et identification du portefeuille optimal.
 
-![Exemple de Frontière Efficiente](path/to/frontiere_efficiente_image.png)  
-*Exemple de frontière efficiente : chaque point représente une combinaison rendement/risque, et le point rouge correspond au portefeuille optimal.*
+Avec un portefeuille plus varié, on obtient un meilleur résultat:
+15% de rendement pour 6,5% de risque
+
+![Figure_1_projet2](https://github.com/user-attachments/assets/cc11c918-98fd-4b63-8c93-0d36efb651c8)
+
+*Avec 20 actions, la frontière d'efficience est moins visible car le nombre de combinaisons possibles augmente mais le nombre de portefeuilles aléatoires est limité*
+
 
 ---
 
