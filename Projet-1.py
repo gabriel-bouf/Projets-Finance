@@ -12,12 +12,12 @@ def index_SP_avec_risque(nom:str,periode:str,risk:int,fenetre:int):
     if n<fenetre+10:
         print("FENETRE TROP GRANDE")
     
-    rendement=[0]*n#pour creer une liste de taille n avec que des 0
+    rendement=[0]*n
     vol=[0.1]*n
     rendement_ajuste=[0]*n
     prix_ajuste=[historique.Close[0]]*n
 
-    #calcul du rendement
+    #calcul du rendement à la main
     for i in range(1,n):
         rendement[i]= (historique.Close[i]-historique.Close[i-1])/historique.Close[i-1]
 
@@ -28,7 +28,7 @@ def index_SP_avec_risque(nom:str,periode:str,risk:int,fenetre:int):
         for j in range(fenetre):
             variance+=(rendement[i-j]-rendement_moy)**2
         variance/=(fenetre-1)
-        vol[i]= sqrt(variance)*sqrt(252)#vol annuelle, il faut multiplier par le nombre de période
+        vol[i]= sqrt(variance)*sqrt(252)#vol annuelle, il faut multiplier par 252, le nombre de période 
 
     #calcul du prix ajusté
     for i in range(n):#la vol est nulle avant fenetre
