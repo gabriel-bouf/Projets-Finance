@@ -63,7 +63,7 @@ On obtient avec 4 actions:
 
 *On remarquera que les performances obtenues sur ce choix d'actions ne sont pas excellentes*
 
-En modifiant la fonction à minimiser, le portefeuille optimal se déplace sur la frontière d'efficience
+En modifiant la fonction à minimiser, le portefeuille optimal se déplace sur la frontière d'efficience.
 
 
 
@@ -72,17 +72,13 @@ En modifiant la fonction à minimiser, le portefeuille optimal se déplace sur l
 
 
 
-Avec un portefeuille plus varié, on obtient un meilleur résultat:
-
-
-
-15% de rendement pour 6,5% de risque
+Avec un portefeuille plus varié, on obtient 15% de rendement pour 6,5% de risque, bien meilleur résultat.
 
 
 
 ![Figure_1_projet2](https://github.com/user-attachments/assets/cc11c918-98fd-4b63-8c93-0d36efb651c8)
 
-*Avec 20 actions, la frontière d'efficience est moins visible car le nombre de combinaisons possibles augmente mais le nombre de portefeuilles aléatoires est limité*
+*Avec 20 actions, la frontière d'efficience est moins visible car le nombre de combinaisons possibles augmente mais le nombre de portefeuilles aléatoires est limité à cause du temps de calcul*
 
 
 ---
