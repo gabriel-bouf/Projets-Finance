@@ -81,6 +81,12 @@ def tickers_mistral(n,start,end):
     prefixe="Il faut que tu varie tes réponse. Si tu choisi de mettre l'un ou plusieurs d'entre eux, met juste le bon ticker : change 'FB' par 'META', change 'BNP' par 'BNP.PA',change 'TOT' par 'TTE.PA',change 'BT' par 'BT-A.L'. Ne porpose pas 'BNSF' ni 'TWTR'. N'ajoute aucuns détails ou explication, n'invente aucun ticker. Ne met pas de retour à la ligne dans la liste."
     
     api_key = "a remplir"
+
+    if api_key == "a remplir":
+        print("Vous devez rentrer votre clé API pour utiliser Mistral")
+        
+        #Si vous n'avez pas de clé API, choisissez les actions à la main 
+        return ['AAPL', 'MSFT', 'NVDA', 'META', 'V']
     
     model ="open-mistral-nemo-2407"
     client=MistralClient(api_key=api_key)
