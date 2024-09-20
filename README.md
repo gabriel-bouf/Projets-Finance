@@ -99,6 +99,32 @@ Il sélectionne celles restantes avec les proportions suivantes:
 - NFLX, Poids: 19.8%
 
 
+**On obtient d'encore meilleurs résultats avec 55 actions de secteurs variés : 40% de rendement pour 8,5% de risque**
+
+Proportions correspondantes :
+
+- GOOGL, Poids: 0.6%
+- ORCL, Poids: 3.6%
+- PG, Poids: 5.8%
+- KO, Poids: 8.3%
+- WMT, Poids: 17.0%
+- COST, Poids: 5.5%
+- SO, Poids: 9.3%
+- XOM, Poids: 4.5%
+- GE, Poids: 11.8%
+- LMT, Poids: 17.7%
+- NFLX, Poids: 8.7%
+- T, Poids: 7.4%
+
+
+Une majeure partie des entreprises n'ont pas été retenues dans cet exemple :
+
+`['AAPL', 'MSFT', 'IBM', 'JNJ', 'PFE', 'MRK', 'UNH', 'ABT', 'JPM', 'BAC', 'GS', 'C', 'MS', 'TSLA', 'AMZN', 'HD', 'NKE', 'MCD', 'PEP', 'NEE', 'DUK', 'AEP', 'EXC', 'CVX', 'COP', 'BP', 'SLB', 'BHP', 'RIO', 'DD', 'VALE', 'FCX', 'SPG', 'PLD', 'AMT', 'PSA', 'CBRE', 'BA', 'CAT', 'DE', 'DIS', 'VZ', 'CHTR']`
+
+## Améliorations possible
+
+Les portefeuilles sont générés avec des proportions aléatoires qui suivent une loi de probabilité uniforme, grâce à la fonction np.random.random. Lorsqu'on se base sur un grand nombre d'actions, ces portefeuilles aléatoires ne représentent pas les meilleurs portefeuilles puisque les meilleures solutions nécessitent d'exclure un grand nombre d'actions (43 actions à supprimer pour la solution optimale du dernier exemple). Il faudrait donc remplacer `np.random.random` par `np.random.normal` pour avoir une loi gaussienne, qui peut favoriser les valeurs proches de 0 et ainsi filtrer les actions. Malheureusement le coût de calcul est trop important pour mon ordinateur.
+
 ---
 
 
