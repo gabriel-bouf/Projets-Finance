@@ -1,9 +1,9 @@
-# Projets Finance
+# Projets Finance 
 
 
 Ces projets utilisent `python3`
 
-Attention : Dans le projet 2, vous devez rentrer votre clé API pour utiliser Mistral donc choisissez les actions à la main si vous n'en avez pas.
+Attention : Dans le projet 2, vous devez rentrer votre clé API pour utiliser Mistral, il faut choisir les actions manuellement si vous n'en avez pas.
 # Projet 1: Construction de l'indice S&P 500 avec un risque journalier contrôlé à 5%
 
 L'objectif est d'ajuster dynamiquement l'exposition au S&P 500 en fonction de la volatilité afin de maintenir un risque constant de 5%. J'utilise pour cela les données de l'API `yfinance` de Yahoo Finance.
@@ -41,7 +41,7 @@ Par rapport au [modèle de base](https://www.spglobal.com/spdji/en/indices/multi
 
 # Projet 2: Optimisation de Portefeuille avec le modèle de Markowitz et l'API Mistral
 
-Ce projet met en œuvre l'optimisation de portefeuille selon le modèle de **Markowitz**. L'objectif est de construire un portefeuille efficient en maximisant le rendement tout en minimisant le risque, à l'aide de données financières provenant de Yahoo Finance. Plus précisement, je cherche à minimiser la fonction `risque/rendement`, ce qui est un choix personnel pour ne pas avoir de positions trop risquées, par rapport à `risque/(rendement**2)` par exemple. 
+Ce projet met en œuvre l'optimisation de portefeuille selon le modèle de **Markowitz**. L'objectif est de construire un portefeuille efficient en maximisant le rendement tout en minimisant le risque, à l'aide de données financières provenant de Yahoo Finance. Plus précisément, je cherche à minimiser la fonction `risque/rendement`, ce qui est un choix personnel pour ne pas avoir de positions trop risquées, par rapport à `risque/(rendement**2)` par exemple. 
 
 
 ## Description du Projet
@@ -123,7 +123,11 @@ Une majeure partie des entreprises n'ont pas été retenues dans cet exemple :
 
 ## Améliorations possible
 
+*Meilleure génération des portefeuilles aléatoire :*
 Les portefeuilles sont générés avec des proportions aléatoires qui suivent une loi de probabilité uniforme, grâce à la fonction np.random.random. Lorsqu'on se base sur un grand nombre d'actions, ces portefeuilles aléatoires ne représentent pas les meilleurs portefeuilles puisque les meilleures solutions nécessitent d'exclure un grand nombre d'actions (43 actions à supprimer pour la solution optimale du dernier exemple). Il faudrait donc remplacer `np.random.random` par `np.random.normal` pour avoir une loi gaussienne, qui peut favoriser les valeurs proches de 0 et ainsi filtrer les actions. Malheureusement le coût de calcul est trop important pour mon ordinateur.
+
+*Backtesting*
+Un code permettant de visualiser les performances concrètes du portefeuille optimal est en cours d'implémentation. 
 
 ---
 
