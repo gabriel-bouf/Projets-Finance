@@ -104,6 +104,12 @@ Il sélectionne celles restantes avec les proportions suivantes:
 
 **On obtient d'encore meilleurs résultats avec 55 actions de secteurs variés : 40% de rendement pour 8,5% de risque**
 
+![55_40_8_100k](https://github.com/user-attachments/assets/c2d744f2-ee99-4a92-aba5-d08e944eecdd)
+
+*Malgré 100 000 portefeuilles générés aléatoirement, il est impossible de visualiser la frontière efficiente*
+
+
+
 Proportions correspondantes :
 
 - GOOGL, Poids: 0.6%
