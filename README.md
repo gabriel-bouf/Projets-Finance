@@ -106,7 +106,7 @@ Il sélectionne celles restantes avec les proportions suivantes:
 
 ![55_40_8_100k](https://github.com/user-attachments/assets/c2d744f2-ee99-4a92-aba5-d08e944eecdd)
 
-*Malgré 100 000 portefeuilles générés aléatoirement, il est impossible de visualiser la frontière efficiente*
+*Malgré 100 000 portefeuilles générés aléatoirement, il est impossible de visualiser la frontière efficiente. Par ailleurs le rendement semble très élevé, c'est pourquoi un programme de backtesting est en développement.*
 
 
 
