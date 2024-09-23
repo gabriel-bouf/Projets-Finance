@@ -60,6 +60,9 @@ L'objectif est de trouver les pondérations optimales des actions dans un portef
 
 
 ## Présentation des résultats
+L'analyse est faite entre le 1er janvier 2024 et le 1er septembre 2024
+
+
 On obtient avec 4 actions:
 
 ![p2_5a_puiss08](https://github.com/user-attachments/assets/23492b3a-4ac7-4681-8a03-375796ebb58b)
@@ -123,10 +126,12 @@ Une majeure partie des entreprises n'ont pas été retenues dans cet exemple :
 
 ## Améliorations possible
 
-*Meilleure génération des portefeuilles aléatoire :*
+**Meilleure génération des portefeuilles aléatoire :**
+
 Les portefeuilles sont générés avec des proportions aléatoires qui suivent une loi de probabilité uniforme, grâce à la fonction np.random.random. Lorsqu'on se base sur un grand nombre d'actions, ces portefeuilles aléatoires ne représentent pas les meilleurs portefeuilles puisque les meilleures solutions nécessitent d'exclure un grand nombre d'actions (43 actions à supprimer pour la solution optimale du dernier exemple). Il faudrait donc remplacer `np.random.random` par `np.random.normal` pour avoir une loi gaussienne, qui peut favoriser les valeurs proches de 0 et ainsi filtrer les actions. Malheureusement le coût de calcul est trop important pour mon ordinateur.
 
-*Backtesting*
+**Backtesting**
+
 Un code permettant de visualiser les performances concrètes du portefeuille optimal est en cours d'implémentation. 
 
 ---
