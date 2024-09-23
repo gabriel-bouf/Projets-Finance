@@ -60,7 +60,7 @@ L'objectif est de trouver les pondérations optimales des actions dans un portef
 
 
 ## Présentation des résultats
-L'analyse est faite entre le 1er janvier 2024 et le 1er septembre 2024
+L'analyse est faite entre le 1er janvier 2024 et le 1er septembre 2024.
 
 
 On obtient avec 4 actions:
