@@ -84,9 +84,26 @@ def tickers_mistral(n,start,end):
 
     if api_key == "a remplir":
         print("Vous devez rentrer votre clé API pour utiliser Mistral")
+        #Si vous n'avez pas de clé API, les actions sont choisies aléatoirement parmi cette liste :
         
-        #Si vous n'avez pas de clé API, choisissez les actions à la main 
-        return ['AAPL', 'MSFT', 'NVDA', 'META', 'V']
+        base_de_donnee_actions= [
+        "AAPL", "MSFT", "GOOGL", "ORCL", "IBM",     # Tech
+        "JNJ", "PFE", "MRK", "UNH", "ABT",           # Santé
+        "JPM", "BAC", "GS", "C", "MS",               # Services financiers
+        "TSLA", "AMZN", "HD", "NKE", "MCD",          # Consommation cyclique
+        "PG", "KO", "PEP", "WMT", "COST",            # Consommation de base
+        "NEE", "DUK", "SO", "AEP", "EXC",            # Services publics
+        "XOM", "CVX", "COP", "BP", "SLB",            # Énergie
+        "BHP", "RIO", "DD", "VALE", "FCX",           # Matériaux
+        "SPG", "PLD", "AMT", "PSA", "CBRE",          # Immobilier
+        "BA", "CAT", "GE", "DE", "LMT",              # Industriels
+        "NFLX", "DIS", "T", "VZ", "CHTR"             # Communication
+        ]
+        actions=[]
+        for i in range(n):
+            actions.append(base_de_donnee_actions[np.random.randint(0,len(base_de_donnee_actions))])
+            base_de_donnee_actions.remove(actions[i])
+        return actions
     
     model ="open-mistral-nemo-2407"
     client=MistralClient(api_key=api_key)
@@ -99,7 +116,7 @@ def tickers_mistral(n,start,end):
     actions = actions_dict['tickers']
     if (type(actions))!=list:
         print("Erreur lors de la récupération des tickers")
-        return Error
+        return []
     return actions
 
 def affichage_meilleure_partition(actions,start,end,nombre_portefeuilles):
@@ -110,11 +127,11 @@ def affichage_meilleure_partition(actions,start,end,nombre_portefeuilles):
     for action, poids in actions_a_garder:
         print(f'Action: {action}, Poids: {poids*100}%')
 
-    print(actions_a_garder)
+    #print("Combinaison optimale :", actions_a_garder)
 
     meilleur_couple=[calcul_rendement_portefeuille(meilleure_partition,rendements.mean()),calcul_risque_portefeuille(meilleure_partition,rendements.cov())]
-    print("Avec un rendement de",meilleur_couple[0],"et un risque de",meilleur_couple[1])
-    print("Actions à enlever:",action_a_jetee)
+    print("Actions à enlever :",action_a_jetee)
+    print(f'Ce portefeuille aurait eu un rendement de {round(meilleur_couple[0]*100,4)}%, et un risque de {round(meilleur_couple[1]*100,4)}% entre {start} et {end}')
     couples = generer_portefeuilles(rendements, nombre_portefeuilles)
     afficher_portefeuilles(couples,meilleur_couple)
     return
