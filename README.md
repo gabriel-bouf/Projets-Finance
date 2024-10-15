@@ -6,7 +6,7 @@ Ces projets utilisent `python3`
 Attention : Dans le projet 2, vous devez rentrer votre clé API pour utiliser l'IA Mistral. Si vous n'avez pas de clé API, des actions sont choisies aléatoirement parmi une liste modifiable.
 # Projet 1: Construction de l'indice S&P 500 avec un risque journalier contrôlé à 5%
 
-L'objectif est d'ajuster dynamiquement l'exposition au S&P 500 en fonction de la volatilité afin de maintenir un risque constant de 5%. J'utilise pour cela les données de l'API `yfinance` de Yahoo Finance.
+L'objectif est d'ajuster dynamiquement l'exposition d'un portefeuille représentant le S&P 500 en fonction de sa volatilité afin de maintenir un risque maximum de 5%. J'utilise pour cela les données de l'API `yfinance` de Yahoo Finance.
 
 ## Description du Projet
 
