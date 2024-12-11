@@ -41,7 +41,7 @@ Par rapport au [modèle de base](https://www.spglobal.com/spdji/en/indices/multi
 
 # Projet 2: Optimisation de Portefeuille avec le modèle de Markowitz et l'API Mistral
 
-Ce projet met en œuvre l'optimisation de portefeuille selon le modèle de **Markowitz**. L'objectif est de construire un portefeuille efficient en maximisant le rendement tout en minimisant le risque, à l'aide de données financières provenant de Yahoo Finance. Plus précisément, je cherche à minimiser la fonction `risque/rendement`, ce qui est un choix personnel pour ne pas avoir de positions trop risquées, par rapport à `risque/(rendement**2)` par exemple. 
+Ce projet met en œuvre l'optimisation de portefeuille selon le modèle de **Markowitz**. L'objectif est de construire un portefeuille efficient en maximisant le rendement tout en minimisant le risque, à l'aide de données financières provenant de Yahoo Finance. Plus précisément, je cherche à maximiser le ratio de Sharpe `(rendement - taux sans risque)/risque`, ce qui est un choix personnel pour ne pas avoir de positions trop risquées, par rapport à `(rendement - taux sans risque)**2/risque` par exemple. 
 
 
 ## Description du Projet
@@ -60,7 +60,6 @@ L'objectif est de trouver les pondérations optimales des actions dans un portef
 
 
 ## Présentation des résultats
-L'analyse est faite entre le 1er janvier 2024 et le 1er septembre 2024.
 
 
 On obtient avec 4 actions:
@@ -138,7 +137,7 @@ Les portefeuilles sont générés avec des proportions aléatoires qui suivent u
 
 **Backtesting**
 
-Un code permettant de visualiser les performances concrètes du portefeuille optimal est en cours d'implémentation. 
+
 
 ---
 
