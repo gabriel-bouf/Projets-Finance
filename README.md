@@ -58,7 +58,7 @@ Expected return of the portfolio over the period : 45.233 %
 
 On peut modifier le prompting et demander aussi la présence de cryptomonnaies, ainsi qu'une centaine d'actions, ce qui permetterait de trouver une combinaison optimale en sachant qu'on arrondie les poids à 3 chiffres significatifs, ce qui supprime les valeurs proches de 0. Malheureusement, Mistral invente un trop grand nombre d'actions dans ce cas et seulement une vingtaine est retenue en général.
 
-Après modification du prompt, on obtient pour 15 actions:
+Après modification du prompt pour inclure des cryptomonnaies, on obtient pour 15 actions:
 
 ```
 Mistral proposition :
@@ -76,7 +76,9 @@ Return of the portfolio on the tested period :
 Expected return of the portfolio over the period : 26.39 %
 ```
 
+
 ![back4](https://github.com/user-attachments/assets/16130d77-e207-4040-9588-70c072856db7)
+
 
 Les paliers qu'on peut voir sur les courbes correspondent à la différence de fuseaux horaires des bourses puisque le prix est constant lorsqu'elles sont fermées ainsi que les cryptomonnaies, qui varient continuement.
 
