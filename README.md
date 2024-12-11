@@ -112,7 +112,9 @@ Par rapport au [modèle de base](https://www.spglobal.com/spdji/en/indices/multi
 
 ## Améliorations en cours
 
-1. **Ajout de contraintes supplémentaires :**  
+1. **Projet 2 : Ajout de contraintes supplémentaires :**  
    - Limiter la part maximale d'une action pour éviter une concentration excessive sur une seule performance historique.
-2. **Génération améliorée des portefeuilles aléatoires :**  
+2. **Projet 2 : Génération améliorée des portefeuilles aléatoires :**  
    - Remplacer `np.random.random` par `np.random.normal` pour privilégier des poids proches de 0, tout en réduisant le coût de calcul.
+3. **Projet 1 : Paramètres supplémentaires de contrôle**  
+   - Prise en compte du **Lag rebalancing**, poids exponentiel aux données dans le calcul de l'écart-type pour prendre plus en compte les données récentes **(EWA)**
