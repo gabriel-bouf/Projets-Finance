@@ -94,9 +94,9 @@ Les étapes importantes de l'algorithme :
 1. **Récupération des données historiques** avec `yfinance`.  
 2. **Calcul des rendements et de la volatilité** sur une fenêtre définie (par exemple 20 jours).
 3. **Ajustement du rendement** pour respecter le risque cible, avec la formule :  
-   \[
+   $`
    \text{Rendement modifié} = \text{Rendement} \times \left(\frac{\text{Volatilité cible}}{\text{Volatilité actuelle}}\right)
-   \]
+   `$
 
 ### Résultats
 
