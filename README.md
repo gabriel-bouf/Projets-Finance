@@ -10,7 +10,7 @@ implied volatility would on average over the period made the P&L of a delta hedg
 
 ### Delta Hedging
 
-The first step of the project is to simulate delta hedging. I used yfinance library to get Apple stock price from January 1rst, 2024 to August 1rst, 2024 in order to simulate a delta hedging strategy. By ploting the P&L of the hedging depending on the strike price and the volatility used in Black model, it is interesting to see that le P&L cannot be positive if the strike price is too low ITM (in this example
+The first step of the project is to simulate delta hedging. I used yfinance library to get Apple stock price from January 1rst, 2024 to August 1rst, 2024 in order to simulate a delta hedging strategy. By ploting the P&L of the hedging depending on the strike price and the volatility used in Black model, it is interesting to see that le P&L cannot be positive if the strike price is too low ITM (in this example the initial spot price was $184 and the spot price at maturity was $221
 
 
 ## Projet 2 : Optimisation de Portefeuille avec le modèle de Markowitz et l'API Mistral
