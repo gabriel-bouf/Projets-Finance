@@ -3,6 +3,15 @@
 Ces projets utilisent `Python`.
 
 ---
+## Projet 3 : Skew of volatility
+
+The idea is to use the historical time series of the excess return index assuming interest rates are equal to fed fund to imply what 
+implied volatility would on average over the period made the P&L of a delta hedged call option equal to zero.
+
+### Delta Hedging
+
+The first step of the project is to simulate delta hedging. I used yfinance library to get Apple stock price from January 1rst, 2024 to August 1rst, 2024 in order to simulate a delta hedging strategy. By ploting the P&L of the hedging depending on the strike price and the volatility used in Black model, it is interesting to see that le P&L cannot be positive if the strike price is too low ITM (in this example
+
 
 ## Projet 2 : Optimisation de Portefeuille avec le modèle de Markowitz et l'API Mistral
 
