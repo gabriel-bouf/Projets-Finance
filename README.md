@@ -10,7 +10,7 @@ implied volatility would on average over the period made the P&L of a delta hedg
 
 ### Delta Hedging
 
-The first step of the project is to simulate delta hedging. I used yfinance library to get Apple stock price from January 1rst, 2024 to August 1rst, 2024 in order to simulate a delta hedging strategy. By ploting the P&L of the hedging depending on the strike price and the volatility used in Black-Scholes model, it is interesting to see that the P&L cannot be positive if the strike price is too low ITM. In the following example, the initial spot price was $184 and the spot price at maturity was $221. We can see that below K=150, the P&L is negative, which means the Break-Even Volatility doesn't exist.
+The first step in this project is to simulate delta hedging. I used the `yfinance` library to retrieve Apple stock prices from January 1, 2024, to August 1, 2024, to simulate a delta hedging strategy. By plotting the P&L of the hedging strategy as a function of the strike price and the volatility used in the Black-Scholes model, it is interesting to observe that the P&L cannot be positive if the strike price is too low (deep in the money). In the following example, the initial spot price was $184, and the spot price at maturity was $221. We can see that below K=150, the P&L remains negative, meaning the Break-Even Volatility does not exist.
 
 The simulation was run with the following parameters:
 - **Commission rate:** 0.03%
@@ -23,6 +23,16 @@ The simulation was run with the following parameters:
 
 After finding the break-even volatility based on the P&L simulation, I have obtained the following BEV surface :
 ![BEV2](https://github.com/user-attachments/assets/4f1ff3ec-ca7f-45dd-96ab-accf05efadef)
+
+Based on the provided BEV (Break-Even Volatility) surface, we can observe the following:
+
+- Strike Price Impact: The surface illustrates that for very low strike prices, the P&L remains negative, indicating that a break-even volatility does not exist in these scenarios. This is because the cost of hedging exceeds the potential gains from the option position.
+- Volatility Variation: For higher strike prices, the break-even volatility tends to stabilize, reflecting a more balanced hedging strategy.
+- Maturity Effect: The time to maturity also plays a significant role, with shorter maturities generally requiring higher volatilities to break even.
+- Transaction Costs: The inclusion of commission rates and bid-ask spreads adds to the overall cost of the hedging strategy, making it more challenging to achieve a positive P&L, especially for deep in-the-money options.
+
+
+---
 
 ## Projet 2 : Optimisation de Portefeuille avec le modèle de Markowitz et l'API Mistral
 
