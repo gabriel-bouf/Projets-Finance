@@ -27,10 +27,7 @@ After finding the break-even volatility based on the P&L simulation, I have obta
 
 Based on the provided BEV (Break-Even Volatility) surface, we can observe the following:
 
-- Strike Price Impact: The surface illustrates that for very low strike prices, the P&L remains negative, indicating that a break-even volatility does not exist in these scenarios. This is because the cost of hedging exceeds the potential gains from the option position.
-- Volatility Variation: For higher strike prices, the break-even volatility tends to stabilize, reflecting a more balanced hedging strategy.
-- Maturity Effect: The time to maturity also plays a significant role, with shorter maturities generally requiring higher volatilities to break even.
-- Transaction Costs: The inclusion of commission rates and bid-ask spreads adds to the overall cost of the hedging strategy, making it more challenging to achieve a positive P&L, especially for deep in-the-money options.
+- The BEV is near 0 for 450-480 days maturity and for deep OTM options.
 
 
 ---
