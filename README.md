@@ -22,7 +22,8 @@ The simulation was run with the following parameters:
 ![skeww 3d k150](https://github.com/user-attachments/assets/4208010f-38e7-4b74-9812-c0b6880470c9)
 
 After finding the break-even volatility based on the P&L simulation, I have obtained the following BEV surface :
-![BEV2](https://github.com/user-attachments/assets/4f1ff3ec-ca7f-45dd-96ab-accf05efadef)
+![bev4](https://github.com/user-attachments/assets/0f867512-6fd6-439f-8e83-7829a44f0235)
+
 
 Based on the provided BEV (Break-Even Volatility) surface, we can observe the following:
 
