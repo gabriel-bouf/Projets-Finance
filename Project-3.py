@@ -11,10 +11,10 @@ def skeww(N_call,K,ticker,start,end,vol):
 
     stock=yf.Ticker(ticker)
     history=stock.history(start=start,end=end)
-    spot_price=history['Close'].iloc[0] #today spot meme si ducoup c'est au début de la période
+    spot_price=history['Close'].iloc[0]
     
 
-    today= ql.Date(int(start[8:]),int(start[5:7]),int(start[0:4])) #1 jan 2025
+    today= ql.Date(int(start[8:]),int(start[5:7]),int(start[0:4])) #DD/MM/YYYY
     ql.Settings.instance().evaluationDate = today
     expiry =ql.Date(int(end[8:]),int(end[5:7]),int(end[0:4]))
     option_type= ql.Option.Call
@@ -54,10 +54,10 @@ def skeww(N_call,K,ticker,start,end,vol):
             P_and_L*=exp(daily_risk_free_rate)#loan interest
 
     if K<spot_price:
-        P_and_L+=K*N_call#on gagne ce que nous donne la position longue du call
+        P_and_L+=K*N_call
 
     if K>spot_price:
-        P_and_L += delta * N_call * spot_price#on revend les actions si l'acheteur n'en a pas besoin
+        P_and_L += delta * N_call * spot_price
 
     return P_and_L
 
@@ -71,18 +71,13 @@ def find_break_even_vol(N_call, K, ticker, start, end):
 
 
 def volatility_skew(ticker, start, N_call, n):
-
     spot_price = yf.Ticker(ticker).history(start=start, period="1mo")['Close'].iloc[0]
     strikes = np.linspace(floor(spot_price * 0.8), floor(spot_price * 1.2), n)
-    
-
     start_date = pd.Timestamp(start)
     maturities = [i for i in range(1,24)]
     end_dates = [start_date + pd.DateOffset(months=m) for m in maturities]
 
-
     strikes_mesh, maturities_mesh, bevs_mesh = [], [], []
-
     for strike in strikes:
         for end in end_dates:
             bev = find_break_even_vol(N_call, strike, ticker, start, end.strftime('%Y-%m-%d'))
@@ -95,7 +90,7 @@ def volatility_skew(ticker, start, N_call, n):
                                  np.linspace(min(maturities_mesh), max(maturities_mesh), n))
     grid_z = griddata((strikes_mesh, maturities_mesh), bevs_mesh, (grid_x, grid_y), method='cubic')
 
-    # Affichage des résultats sous forme de surface
+    # Affichage des résultats
     fig = plt.figure(figsize=(10, 6))
     ax = fig.add_subplot(111, projection='3d')
     ax.plot_surface(grid_x, grid_y, grid_z, cmap='viridis', alpha=0.5)
@@ -110,8 +105,8 @@ def volatility_skew(ticker, start, N_call, n):
 start = '2023-01-01'#yyyy-mm-dd
 end = '2024-04-01'
 bev = find_break_even_vol(100, 110, 'AAPL', start, end)
-print("Break-even volatility:", round(100*bev,3),"%")
-print(" P&L associate:",skeww(100, 110, 'AAPL', start, end,bev))
+#print("Break-even volatility:", round(100*bev,3),"%")
+#print(" P&L associate:",skeww(100, 110, 'AAPL', start, end,bev))
 
 
 volatility_skew("AAPL", '2023-01-01', 100, 20)
