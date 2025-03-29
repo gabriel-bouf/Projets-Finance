@@ -27,7 +27,9 @@ After finding the break-even volatility based on the P&L simulation, I have obta
 
 Based on the provided BEV (Break-Even Volatility) surface, we can observe the following:
 
+- Low strikes lead to higher BEV.
 - The BEV is near 0 for 450-480 days maturity and for deep OTM options.
+
 
 
 ---
