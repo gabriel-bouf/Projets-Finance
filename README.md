@@ -142,6 +142,16 @@ Par rapport au [modèle de base](https://www.spglobal.com/spdji/en/indices/multi
 **Mon modèle :**  
 ![SP500_le_mien](https://github.com/user-attachments/assets/96cc1b53-a108-4230-ae73-cc5de319ec41)
 
+We can add the risk free component (in green) :
+![sp perf](https://github.com/user-attachments/assets/2bb5cee0-2ef3-40b2-9648-8f2aaf2e38eb)
+
+
+**Comparison of Volatilities :** 
+
+![SP vols](https://github.com/user-attachments/assets/ab504701-03fb-42b6-b8b4-ed92a2a29e5e)
+
+Target volatility in green.
+
 ---
 
 ## Améliorations en cours
