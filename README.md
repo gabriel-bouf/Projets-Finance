@@ -1,4 +1,4 @@
-# Projets Finance 
+# Personal Projects
 
 Ces projets utilisent `Python`.
 
@@ -25,6 +25,7 @@ The simulation was run with the following parameters:
 ![skeww 3d k150](https://github.com/user-attachments/assets/4208010f-38e7-4b74-9812-c0b6880470c9)
 
 After finding the break-even volatility based on the P&L simulation, I have obtained the following BEV surface :
+
 ![bev4](https://github.com/user-attachments/assets/0f867512-6fd6-439f-8e83-7829a44f0235)
 
 
@@ -75,7 +76,8 @@ Deleted tickers:
 
 Return of the portfolio on the tested period:
  17.295 %
-Expected return of the portfolio over the period: 45.233 %
+Expected return of the portfolio over the period: 45.2%
+
 *Past performance is not indicative of future results* at its best.
 
 ![backt3](https://github.com/user-attachments/assets/07167c7a-105a-4e9d-812c-fdfd21c1ab86)  
@@ -95,11 +97,11 @@ Deleted tickers:
 ```
 This portfolio is supposed to have a daily return of 0.1922% and a daily risk of 0.6308% based on 2024-01-01 to 2024-08-01.
 
-```
+
 Return of the portfolio on the tested period : 
  4.834 %
 Expected return of the portfolio over the period : 26.39 %
-```
+
 ![back4](https://github.com/user-attachments/assets/16130d77-e207-4040-9588-70c072856db7)
 
 The plateaus on the curves correspond to differences in trading hours across markets, with crypto trading continuously while traditional exchanges close.
@@ -123,11 +125,11 @@ Key steps of the algorithm:
 2. Computation of returns and volatility over a rolling window (e.g., 20 days), using exponential weight averaging to calculate the recent realized volatility.
 3. Return adjustment to meet the target risk using the formula:  
    $`
-   \text{Rendement modifié} = E \times \text{Rendement}  +(1-E) \times \text{Rendement} 
+   \text{Index Returns} = E \times \text{Returns}  +(1-E) \times \text{Returns} 
     `$
-   avec
+   with
    $`
-   E = min(1,\left(\frac{\text{Volatilité cible}}{\text{Volatilité actuelle}}\right)) `$
+   E = min(1,\left(\frac{\text{Target Volatility}}{\text{Realized Volatility}}\right)) `$
   
 
 ### Results
@@ -140,6 +142,7 @@ Compared to the [official model](https://www.spglobal.com/spdji/en/indices/multi
 ![SP500_le_mien](https://github.com/user-attachments/assets/96cc1b53-a108-4230-ae73-cc5de319ec41)
 
 Including the risk-free component (in green):
+
 ![sp perf](https://github.com/user-attachments/assets/2bb5cee0-2ef3-40b2-9648-8f2aaf2e38eb)
 
 
