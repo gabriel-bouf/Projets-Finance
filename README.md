@@ -1,9 +1,8 @@
 # Personal Projects
 
-Ces projets utilisent `Python`.
 
 ---
-## Projet 3 : Skew of volatility
+## Project 3 : Skew of volatility
 
 The idea is to use the historical time series of the excess return index assuming interest rates are equal to fed fund to imply what 
 implied volatility would on average over the period made the P&L of a delta hedged call option equal to zero.
